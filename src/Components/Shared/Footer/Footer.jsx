@@ -58,7 +58,10 @@ const Footer = () => {
                             <a className="flex items-center gap-1 border p-2 rounded-md"><FaSquareXTwitter /> Twitter</a>
                         </nav>
                     </div>
+
                 </footer>
+                <div className='border'></div>
+                <p className='text-right text-neutral-300 p-2 '>© 2026 Skillsphere. All rights reserved.</p>
             </div>
         </div >
     );
