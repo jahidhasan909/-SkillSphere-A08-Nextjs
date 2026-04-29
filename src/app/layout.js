@@ -1,6 +1,7 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Shared/Navbar/Navbar";
+import Footer from "@/Components/Shared/Footer/Footer";
 
 const OutfitStyle = Outfit({
   subsets: ["latin"],
@@ -17,7 +18,10 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <Navbar></Navbar>
-        {children}
+        <main className=" grow">
+          {children}
+        </main>
+        <Footer></Footer>
       </body>
     </html>
   );
