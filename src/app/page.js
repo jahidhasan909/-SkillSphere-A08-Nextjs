@@ -1,6 +1,7 @@
 import Banner from "@/Components/Banner/Banner";
 import HighestRatedCours from "@/Components/HighestRatedTop/HighestRatedCours";
 import LearingTipsSection from "@/Components/LearingTips/LearingTipsSection";
+import StudentReview from "@/Components/StudentReview/StudentReview";
 import TopInstructor from "@/Components/TopInstuctor/TopInstructor";
 import { Button } from "@heroui/react";
 import Image from "next/image";
@@ -46,6 +47,10 @@ export default async function Home() {
       </div>
       <LearingTipsSection></LearingTipsSection>
       <TopInstructor></TopInstructor>
+
+      <div className="bg-[#edf1e8]">
+        <StudentReview></StudentReview>
+      </div>
     </div>
   );
 }
