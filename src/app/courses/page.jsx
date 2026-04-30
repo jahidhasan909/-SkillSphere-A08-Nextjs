@@ -1,4 +1,6 @@
 import AllCouresCard from '@/Components/AllCoures/AllCouresCard';
+import SearchInput from '@/Components/Stated/SearchInput';
+
 import { SearchField } from '@heroui/react';
 import React from 'react';
 import { FaSearch } from 'react-icons/fa';
@@ -22,18 +24,11 @@ const CoursesPage = async () => {
 
 
 
-                <div className='relative'>
-                    <span className='top-[37px] left-4  text-neutral-400   z-50 absolute'><IoSearchOutline /></span>
-                    <input className='bg-white  relative w-[300px] py-3 px-3 rounded-md border-[#84b179] border mt-5' type="search" placeholder="        Search" />
-                </div>
+                <SearchInput allCoures={allCoures}></SearchInput>
 
 
 
-                <div className='grid grid-cols-4 gap-3 py-5'>
-                    {
-                        allCoures.map(allCouress => <AllCouresCard allCouress={allCouress} key={allCouress.id}></AllCouresCard>)
-                    }
-                </div>
+               
             </div>
         </div>
     );

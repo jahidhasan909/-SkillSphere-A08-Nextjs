@@ -5,6 +5,7 @@ import StudentReview from "@/Components/StudentReview/StudentReview";
 import TopInstructor from "@/Components/TopInstuctor/TopInstructor";
 import { Button } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
 
@@ -36,7 +37,9 @@ export default async function Home() {
               <h2 className="text-2xl font-bold">Popular <span className="text-[#84b179]">Courses</span></h2>
               <p className="text-[#84b179]">Top rated by our students</p>
             </div>
-            <Button className={'rounded-md bg-[#84b179] text-white font-semibold'} variant="outline">See all courses <FaArrowRight /></Button>
+            <Link href={'/courses'}>
+              <Button className={'rounded-md bg-[#84b179] text-white font-semibold'} variant="outline">See all courses <FaArrowRight /></Button>
+            </Link>
           </div>
           <div className="grid grid-cols-4 gap-4 py-7">
             {
