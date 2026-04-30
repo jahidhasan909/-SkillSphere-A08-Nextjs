@@ -27,7 +27,7 @@ const Navbar = () => {
                     </div>
                     <ul className="flex items-center gap-6 text-[1rem] text-neutral-500">
                         <li><Navlink href="/">Home</Navlink></li>
-                        <li><Navlink href="/courses">Courses</Navlink></li>
+                        <li><Navlink href="/courses">All Courses</Navlink></li>
                         <li><Navlink href="/profile">My Profile</Navlink></li>
                     </ul>
 

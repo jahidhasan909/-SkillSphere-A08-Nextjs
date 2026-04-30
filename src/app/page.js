@@ -1,5 +1,7 @@
 import Banner from "@/Components/Banner/Banner";
 import HighestRatedCours from "@/Components/HighestRatedTop/HighestRatedCours";
+import LearingTipsSection from "@/Components/LearingTips/LearingTipsSection";
+import TopInstructor from "@/Components/TopInstuctor/TopInstructor";
 import { Button } from "@heroui/react";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
@@ -26,7 +28,7 @@ export default async function Home() {
   return (
     <div>
       <Banner></Banner>
-      <div className="bg-[#eff5eb] py-24 mb-20">
+      <div className="bg-[#edf1e8] py-24 mb-20">
         <div className="container mx-auto">
           <div className="flex justify-between items-center">
             <div >
@@ -42,6 +44,8 @@ export default async function Home() {
           </div>
         </div>
       </div>
+      <LearingTipsSection></LearingTipsSection>
+      <TopInstructor></TopInstructor>
     </div>
   );
 }
