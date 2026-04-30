@@ -1,5 +1,6 @@
 import { Button, Card } from '@heroui/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
 
@@ -19,7 +20,9 @@ const AllCouresCard = ({ allCouress }) => {
                         <div className='flex items-center justify-between'>
                             <p className='flex items-center gap-1'><span className='text-orange-300'><FaStar /></span> {allCouress.rating}</p>
                             <p className='text-neutral-400   text-[15px]'>{allCouress.duration}</p>
-                            <Button className={' rounded-md bg-[#84b179] text-white'} variant='outline'>View Details</Button>
+                            <Link href={`/courses/${allCouress.id}`}>
+                                <Button className={' rounded-md bg-[#84b179] text-white'} variant='outline'>View Details</Button>
+                            </Link>
                         </div>
                     </Card.Content>
                 </Card.Header>
