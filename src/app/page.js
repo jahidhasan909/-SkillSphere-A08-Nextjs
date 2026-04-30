@@ -1,6 +1,8 @@
 import Banner from "@/Components/Banner/Banner";
 import HighestRatedCours from "@/Components/HighestRatedTop/HighestRatedCours";
+import { Button } from "@heroui/react";
 import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa";
 
 
 
@@ -18,16 +20,27 @@ const getCoures = async () => {
 export default async function Home() {
 
   const couresData = await getCoures();
-  const topCoures = couresData.sort((a, b) => b.rating - a.rating).slice(0, 3)
+  const topCoures = couresData.sort((a, b) => b.rating - a.rating).slice(0, 4)
 
 
   return (
     <div>
       <Banner></Banner>
-      <div className="  container mx-auto grid grid-cols-3">
-        {
-          topCoures.map(topCouress => <HighestRatedCours key={topCouress.id} topCouress={topCouress}></HighestRatedCours>)
-        }
+      <div className="bg-[#eff5eb] py-24 mb-20">
+        <div className="container mx-auto">
+          <div className="flex justify-between items-center">
+            <div >
+              <h2 className="text-2xl font-bold">Popular <span className="text-[#84b179]">Courses</span></h2>
+              <p className="text-[#84b179]">Top rated by our students</p>
+            </div>
+            <Button className={'rounded-md bg-[#84b179] text-white font-semibold'} variant="outline">See all courses <FaArrowRight /></Button>
+          </div>
+          <div className="grid grid-cols-4 gap-4 py-7">
+            {
+              topCoures.map(topCouress => <HighestRatedCours key={topCouress.id} topCouress={topCouress}></HighestRatedCours>)
+            }
+          </div>
+        </div>
       </div>
     </div>
   );
