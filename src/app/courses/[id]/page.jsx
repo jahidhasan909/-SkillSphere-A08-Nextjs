@@ -1,3 +1,4 @@
+import DetailsCard from '@/Components/DetailsCard/DetailsCard';
 import React from 'react';
 
 const DetailsPage = async ({ params }) => {
@@ -12,7 +13,7 @@ const DetailsPage = async ({ params }) => {
 
     return (
         <div>
-          
+          <DetailsCard expectedCouresDetails={expectedCouresDetails}></DetailsCard>
         </div>
     );
 };
