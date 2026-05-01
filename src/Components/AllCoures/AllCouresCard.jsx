@@ -7,10 +7,10 @@ import { FaStar } from 'react-icons/fa';
 const AllCouresCard = ({ allCouress }) => {
     return (
         <div>
-            <Card className="rounded-md bg-[#ffffff] shadow-md" variant="">
+            <Card className="rounded-md bg-white/40 border border-white/87 backdrop-blur-3xl shadow-lg" variant="">
                 <Card.Header className='space-y-1'>
-                    <div className='relative aspect-square'>
-                        <Image src={allCouress.image} fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' className='object-fill  rounded-md' alt='coures img'></Image>
+                    <div className='relative w-full h-[180px] overflow-hidden rounded-md'>
+                        <Image src={allCouress.image} width={400} height={180} className='object-contain' alt='coures img'></Image>
                     </div>
                     <Card.Description>{allCouress.category}</Card.Description>
                     <Card.Title className='font-bold text-[17px]'>{allCouress.title}</Card.Title>

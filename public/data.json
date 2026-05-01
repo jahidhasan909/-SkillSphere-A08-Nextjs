@@ -33,7 +33,7 @@
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Learn Next.js app router, SSR, and full-stack features.",
-    "image": "https://i.ibb.co.com/R5C8hwT/0d-Kh-U49v-Rbi-SSWknb-HAR-1920-X1357.webp",
+    "image": "https://i.ibb.co.com/PvMHpJth/05.jpg",
     "category": "Development",
     "technologies": ["Next.js", "React", "SSR", "API Routes", "Tailwind CSS"],
     "price": 140
@@ -53,15 +53,15 @@
   },
   {
     "id": 5,
-    "title": "React JS Mastery",
+    "title": "React Native",
     "instructor": "Sarah Johnson",
     "duration": "15 hours",
     "rating": 4.4,
     "level": "Intermediate",
-    "description": "Build modern React applications with hooks and context.",
-    "image": "https://i.ibb.co.com/KjpNXhw4/React-js-png.png",
+    "description": "Build modern React native applications mobile.",
+    "image": "https://i.ibb.co.com/qMynDVW5/2025-06-26-T19-41-53-112-Z-react-native-thumb.jpg",
     "category": "Development",
-    "technologies": ["React", "Hooks", "Context API", "Redux"],
+    "technologies": ["React", "TypeScript", "React Native paper", "Lucide React Native"],
     "price": 110
   },
   {
@@ -98,7 +98,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Learn Python and start your journey in data science.",
-    "image": "https://i.ibb.co.com/0RtjfJh3/python-for-data-science-course.jpg",
+    "image": "https://i.ibb.co.com/sJXtkTWx/2025-06-30-T13-13-06-980-Z-python-course-thumb.jpg",
     "category": "Data Science",
     "technologies": ["Python", "NumPy", "Pandas", "Matplotlib"],
     "price": 100

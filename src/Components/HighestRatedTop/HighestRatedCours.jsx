@@ -7,10 +7,10 @@ import { FaStar } from 'react-icons/fa';
 const HighestRatedCours = ({ topCouress }) => {
     return (
         <div className=''>
-            <Card className="rounded-md bg-[#ffffff] shadow-md" variant="">
+            <Card className="rounded-md bg-white/40 border border-white/87 backdrop-blur-3xl shadow-md" variant="">
                 <Card.Header className='space-y-1'>
-                    <div className='relative aspect-square'>
-                        <Image src={topCouress.image} fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' className='object-fit  rounded-md' alt='coures img'></Image>
+                    <div className='relative w-full h-[180px] overflow-hidden rounded-md'>
+                        <Image src={topCouress.image} height={180} width={400} className='object-contain ' alt='coures img'></Image>
                     </div>
                     <Card.Description>{topCouress.category}</Card.Description>
                     <Card.Title className='font-bold text-[17px]'>{topCouress.title}</Card.Title>

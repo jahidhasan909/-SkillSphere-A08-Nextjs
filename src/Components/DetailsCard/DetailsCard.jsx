@@ -19,9 +19,9 @@ const DetailsCard = ({ expectedCouresDetails }) => {
 
     return (
         <div className=' container mx-auto my-10'>
-            <Card className="rounded-md bg-[#f5fbf0] shadow" variant="tertiary">
+            <Card className="rounded-md bg-[#f5fbf0]  shadow border" variant="tertiary">
                 <Card.Header className='grid grid-cols-12'>
-                    <div className='col-span-9  border-r-2 border-r-[#b2d5ab65] space-y-3 mt-3'>
+                    <div className='col-span-9  border-r-2 border-r-[#b2d5ab65] space-y-3 mt-3 pl-4'>
                         <div className='flex gap-2'>
                             <Chip color="" className='bg-[#e8f5d0] rounded-md font-semibold text-[0.90rem]'>{expectedCouresDetails.level}</Chip>
                             <Chip color="" className='bg-[#e8f5d0] rounded-md font-semibold text-[0.90rem]'>{expectedCouresDetails.category}</Chip>
@@ -37,7 +37,7 @@ const DetailsCard = ({ expectedCouresDetails }) => {
                         </Card.Content>
                         <div className='space-y-2'>
                             <h1 className='font-bold text-[1.10rem]'>Course Curriculum : </h1>
-                            <ul className='space-y-3 pr-9'>
+                            <ul className='space-y-3 pr-6'>
                                 {
                                     expectedCouresDetails.technologies.map((tech, index) => <li className='bg-white border rounded-md px-3 py-3 flex items-center gap-3' key={index}><Avatar className='bg-[#b2cc9dcf] text-white font-semibold'>{index + 1}</Avatar> {tech}</li>)
                                 }

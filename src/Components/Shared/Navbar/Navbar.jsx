@@ -35,7 +35,8 @@ const Navbar = () => {
                         <li><Navlink href="/profile">My Profile</Navlink></li>
                     </ul>
 
-                    <Button variant='outline' className={'rounded-md h-10 bg-[#84b179] text-white font-bold'}>Log In</Button>
+                    <Link href={'/login'}>
+                        <Button variant='outline' className={'rounded-md h-10 bg-[#84b179] text-white font-bold'}>Log In</Button></Link>
                 </header>
             </nav>
 

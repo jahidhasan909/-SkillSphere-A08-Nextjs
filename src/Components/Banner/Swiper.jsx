@@ -16,7 +16,7 @@ export default function ImageSlider() {
                 disableOnInteraction: false,
             }}
             loop={true}
-            className="w-[880px] h-[500px] rounded-[18px]  z-0"
+            className="w-[880px] h-[480px] rounded-[18px]  z-0"
         >
             <SwiperSlide>
                 <img src="https://i.ibb.co.com/mFHg0Fjp/2025-12-08-T14-25-01-527-Z-Course-Thumbnail-12.jpg" className="w-full rounded-[18px]" />

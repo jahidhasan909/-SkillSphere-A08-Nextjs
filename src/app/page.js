@@ -30,11 +30,11 @@ export default async function Home() {
   return (
     <div>
       <Banner></Banner>
-      <div className="bg-[#edf1e8] py-24 mb-20">
+      <div className=" bg-linear-to-r from-[#c7eabb3f] to-[#a2cb8b48] py-24 mb-20">
         <div className="container mx-auto">
           <div className="flex justify-between items-center">
             <div >
-              <h2 className="text-2xl font-bold">Popular <span className="text-[#84b179]">Courses</span></h2>
+              <h2 className="text-2xl font-bold">Popular <span className="text-[#6f9765]">Courses</span></h2>
               <p className="text-[#84b179]">Top rated by our students</p>
             </div>
             <Link href={'/courses'}>
