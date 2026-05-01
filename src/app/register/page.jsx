@@ -22,6 +22,19 @@ const RegisterPage = () => {
 
 
 
+    const handleGoogle = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+            callbackURL: '/'
+        });
+        if (data) {
+            toast.success('Register With Google successful!')
+        }
+        if (!data) {
+            toast.error('something wrong try again!')
+        }
+    }
+
     const onSubmit = async (data) => {
         const { name, email, password, image } = data;
 
@@ -43,8 +56,6 @@ const RegisterPage = () => {
         if (res) {
             toast.success("Sign up successful!");
         }
-        console.log(res);
-
 
     };
 
@@ -139,7 +150,7 @@ const RegisterPage = () => {
                         <div className=''>or</div>
                         <div className='border-t flex-grow'   ></div>
                     </div>
-                    <Button variant='outline' className={'rounded-md w-full'}>
+                    <Button onClick={handleGoogle} variant='outline' className={'rounded-md w-full'}>
                         <Image src={'https://i.ibb.co.com/gbzX7531/google-logo-vector-58333738-removebg-preview.png'} width={30} height={30} alt=''></Image>
                         Continue with Google
                     </Button>

@@ -16,14 +16,26 @@ const LogInPage = () => {
         formState: { errors },
     } = useForm()
 
-
+    const handleGoogle = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+            callbackURL: '/'
+        });
+        if (data) {
+            toast.success('Log In With Google successful!')
+        }
+        if (!data) {
+            toast.error('something wrong try again!')
+        }
+    }
 
     const onSubmit = async (data) => {
         const { email, password } = data;
 
         const { data: res, error } = await authClient.signIn.email({
             password: password,
-            email: email
+            email: email,
+            callbackURL: '/'
         })
         if (error) {
             toast.error("Error Log In: " + error.message)
@@ -45,29 +57,17 @@ const LogInPage = () => {
                     <h1 className='text-center font-bold text-3xl'>Welcome <span className='text-[#65935a]'>Back!</span></h1>
                     <p className='text-center text-neutral-500 text-[14px]'>Continue your learning journey and achieve your goals today.</p>
                     <ul className=' list-disc text-neutral-500 px-40 text-[14px]'>
-                        <li> 120+ expert-led courses</li>
-                        <li>Access to free courses</li>
-                        <li>Track your progress</li>
+                        <li>120+ expert-led courses</li>
+                        <li>Learn at your own pace</li>
+                        <li>Industry certificates</li>
                     </ul>
                 </div>
 
                 <Form className="flex  flex-col gap-4 bg-white shadow-md px-5 py-7 rounded-r-md" onSubmit={handleSubmit(onSubmit)}>
                     <div>
-                        <h1 className='text-2xl font-semibold'>Create Account</h1>
-                        <p className='text-neutral-400 text-[0.90rem]'>Fill in your details to get started</p>
+                        <h1 className='text-2xl font-semibold'>Log In</h1>
+                        <p className='text-neutral-400 text-[0.90rem]'>Enter your credentials to continue</p>
                     </div>
-                    <TextField
-                        isRequired
-                        validate={(value) => {
-                            if (value.length < 3) {
-                                return "Name must be at least 3 characters";
-                            }
-                            return null;
-                        }}
-                    >
-                        <Label>Name</Label>
-                        <Input   {...register('name')} className={' rounded-md border-gray-100 border'} placeholder="Enter your Name" />
-                    </TextField>
 
 
                     <FieldError />
@@ -85,14 +85,7 @@ const LogInPage = () => {
                         <Input       {...register('email')} className={' rounded-md border-gray-100 border'} placeholder="Enter your Email" />
                         <FieldError />
                     </TextField>
-                    <TextField
-                        isRequired
-                        name="image"
 
-                    >
-                        <Label>Photo URL</Label>
-                        <Input   {...register('image')} className={' rounded-md border-gray-100 border'} placeholder="https://.." />
-                    </TextField>
                     <TextField
                         isRequired
                         minLength={8}
@@ -119,7 +112,7 @@ const LogInPage = () => {
                     <div className="flex gap-2">
                         <Button type="submit" className={'rounded-md bg-[#84b179] font-semibold text-white w-full'} variant='outline'>
                             <Check />
-                            Create Account
+                            Log In
                         </Button>
                     </div>
                     <div className='flex items-center gap-2'>
@@ -127,11 +120,11 @@ const LogInPage = () => {
                         <div className=''>or</div>
                         <div className='border-t flex-grow'   ></div>
                     </div>
-                    <Button variant='outline' className={'rounded-md w-full'}>
+                    <Button onClick={handleGoogle} variant='outline' className={'rounded-md w-full'}>
                         <Image src={'https://i.ibb.co.com/gbzX7531/google-logo-vector-58333738-removebg-preview.png'} width={30} height={30} alt=''></Image>
                         Continue with Google
                     </Button>
-                    <p className='text-center text-[14px]'>Already have an account ? <Link className='text-green-800 font-semibold text-[1rem]' href={'/login'}>Login</Link></p>
+                    <p className='text-center text-[14px]'>Don't have an account ?  <Link className='text-green-800 font-semibold text-[1rem]' href={'/register'}>Register</Link></p>
                 </Form>
             </div>
         </div>
