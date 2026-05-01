@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { IoSearchOutline } from 'react-icons/io5';
 import AllCouresCard from '../AllCoures/AllCouresCard';
+import { motion } from 'framer-motion';
 
 
 const SearchInput = ({ allCoures }) => {
@@ -19,13 +20,22 @@ const SearchInput = ({ allCoures }) => {
             </div>
 
 
-            
-                <div className='grid grid-cols-4 gap-3 py-5'>
 
-                    {
-                        fillterArray.map(allCouress => <AllCouresCard allCouress={allCouress} key={allCouress.id}></AllCouresCard>)
-                    }
-                </div>
+            <div className='grid grid-cols-4 gap-3 py-5'>
+
+                {
+                    fillterArray.map((allCouress, index) => <motion.div
+                        key={allCouress.id}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.15 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5, scale: 1.03 }}
+                    >
+                        <AllCouresCard allCouress={allCouress} ></AllCouresCard>
+                    </motion.div>)
+                }
+            </div>
         </div >
     );
 };

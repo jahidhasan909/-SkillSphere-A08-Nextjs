@@ -1,4 +1,5 @@
 import Banner from "@/Components/Banner/Banner";
+import HighestCouresAni from "@/Components/HighestRatedTop/HighestCouresAni";
 import HighestRatedCours from "@/Components/HighestRatedTop/HighestRatedCours";
 import LearingTipsSection from "@/Components/LearingTips/LearingTipsSection";
 import StudentReview from "@/Components/StudentReview/StudentReview";
@@ -41,11 +42,7 @@ export default async function Home() {
               <Button className={'rounded-md bg-[#84b179] text-white font-semibold'} variant="outline">See all courses <FaArrowRight /></Button>
             </Link>
           </div>
-          <div className="grid grid-cols-4 gap-4 py-7">
-            {
-              topCoures.map(topCouress => <HighestRatedCours key={topCouress.id} topCouress={topCouress}></HighestRatedCours>)
-            }
-          </div>
+          <HighestCouresAni topCoures={topCoures}></HighestCouresAni>
         </div>
       </div>
       <LearingTipsSection></LearingTipsSection>
