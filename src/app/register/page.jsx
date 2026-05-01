@@ -4,12 +4,51 @@ import React from 'react';
 import { Check } from "@gravity-ui/icons";
 import Link from 'next/link';
 import Image from 'next/image';
+import { useForm } from 'react-hook-form';
+import { authClient } from '@/lib/auth-client';
+import { toast } from 'react-toastify';
+import { useRouter } from 'next/navigation';
+
 
 const RegisterPage = () => {
-    const onSubmit = (e) => {
-        e.preventDefault();
+
+    const router = useRouter()
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm()
+
+
+
+    const onSubmit = async (data) => {
+        const { name, email, password, image } = data;
+
+        const { data: res, error } = await authClient.signUp.email({
+            name: name,
+            password: password,
+            image: image,
+            email: email
+        },
+            {
+                onSuccess: () => {
+                    router.push('/login')
+                }
+            }
+        )
+        if (error) {
+            toast.error("Error signUp: " + error.message)
+        }
+        if (res) {
+            toast.success("Sign up successful!");
+        }
+        console.log(res);
+
 
     };
+
+
     return (
         <div className='container mx-auto flex justify-center my-20'>
             <div className='grid grid-cols-2 border border-gray-200 rounded-md'>
@@ -24,15 +63,13 @@ const RegisterPage = () => {
                     </ul>
                 </div>
 
-                <Form className="flex  flex-col gap-4 bg-white shadow-md px-5 py-7 rounded-r-md" onSubmit={onSubmit}>
-                   <div>
-                     <h1 className='text-2xl font-semibold'>Create Account</h1>
-                     <p className='text-neutral-400 text-[0.90rem]'>Fill in your details to get started</p>
-                   </div>
+                <Form className="flex  flex-col gap-4 bg-white shadow-md px-5 py-7 rounded-r-md" onSubmit={handleSubmit(onSubmit)}>
+                    <div>
+                        <h1 className='text-2xl font-semibold'>Create Account</h1>
+                        <p className='text-neutral-400 text-[0.90rem]'>Fill in your details to get started</p>
+                    </div>
                     <TextField
                         isRequired
-                        name="name"
-                        
                         validate={(value) => {
                             if (value.length < 3) {
                                 return "Name must be at least 3 characters";
@@ -41,14 +78,13 @@ const RegisterPage = () => {
                         }}
                     >
                         <Label>Name</Label>
-                        <Input className={' rounded-md border-gray-100 border'} placeholder="Enter your Name" />
+                        <Input   {...register('name')} className={' rounded-md border-gray-100 border'} placeholder="Enter your Name" />
                     </TextField>
 
 
                     <FieldError />
                     <TextField
                         isRequired
-                        name="email"
                         type="email"
                         validate={(value) => {
                             if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
@@ -58,20 +94,21 @@ const RegisterPage = () => {
                         }}
                     >
                         <Label>Email</Label>
-                        <Input className={' rounded-md border-gray-100 border'} placeholder="Enter your Email" />
+                        <Input       {...register('email')} className={' rounded-md border-gray-100 border'} placeholder="Enter your Email" />
                         <FieldError />
                     </TextField>
                     <TextField
                         isRequired
                         name="image"
+
                     >
                         <Label>Photo URL</Label>
-                        <Input  className={' rounded-md border-gray-100 border'} placeholder="https://.." />
+                        <Input   {...register('image')} className={' rounded-md border-gray-100 border'} placeholder="https://.." />
                     </TextField>
                     <TextField
                         isRequired
                         minLength={8}
-                        name="password"
+
                         type="password"
                         validate={(value) => {
                             if (value.length < 8) {
@@ -87,7 +124,7 @@ const RegisterPage = () => {
                         }}
                     >
                         <Label>Password</Label>
-                        <Input className={' rounded-md border-gray-100 border'} placeholder="Enter your password" />
+                        <Input {...register('password')} className={' rounded-md border-gray-100 border'} placeholder="Enter your password" />
                         <Description>Must be at least 8 characters with 1 uppercase and 1 number</Description>
                         <FieldError />
                     </TextField>
