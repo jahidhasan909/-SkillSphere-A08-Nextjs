@@ -25,7 +25,6 @@ const RegisterPage = () => {
     const handleGoogle = async () => {
         const data = await authClient.signIn.social({
             provider: "google",
-            callbackURL: '/'
         });
         if (data) {
             toast.success('Register With Google successful!')

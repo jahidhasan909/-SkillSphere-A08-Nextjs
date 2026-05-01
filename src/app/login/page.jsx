@@ -19,7 +19,6 @@ const LogInPage = () => {
     const handleGoogle = async () => {
         const data = await authClient.signIn.social({
             provider: "google",
-            callbackURL: '/'
         });
         if (data) {
             toast.success('Log In With Google successful!')
