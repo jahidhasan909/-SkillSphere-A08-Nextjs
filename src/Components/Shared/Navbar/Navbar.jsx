@@ -1,25 +1,33 @@
-
-import { Button } from '@heroui/react';
+"use client"
+import { Avatar, Button } from '@heroui/react';
 import Image from 'next/image';
-
-
 import React from 'react';
 import Navlink from './Navlink';
 import Link from 'next/link';
+import { signOut, useSession } from '@/lib/auth-client';
+import { HashLoader } from 'react-spinners';
 
 
 const Navbar = () => {
 
 
+    const { data, isPending } = useSession()
 
+    const user = data?.user
+
+
+    if (isPending) {
+        return <div className='flex items-center justify-center min-h-screen'>
+            <HashLoader color="#456e3e" />
+        </div>
+    }
 
 
 
 
     return (
         <div className='border-b  sticky top-0 z-40 border-separator bg-white/10 backdrop-blur-md h-18 items-center flex'>
-            <nav className="
-              w-full px-2  container mx-auto">
+            <nav className="w-full px-2  container mx-auto">
                 <header className="flex h-16 items-center justify-between px-6">
                     <Link href='/'>
                         <div className="flex items-center gap-3">
@@ -35,8 +43,24 @@ const Navbar = () => {
                         <li><Navlink href="/profile">My Profile</Navlink></li>
                     </ul>
 
-                    <Link href={'/login'}>
-                        <Button variant='outline' className={'rounded-md h-10 bg-[#84b179] text-white font-bold'}>Log In</Button></Link>
+
+
+                    {user && <div className='flex items-center gap-2'>
+                        <Avatar>
+                            <Avatar.Image alt="user img" src={user?.image} />
+                            <Avatar.Fallback>JD</Avatar.Fallback>
+                        </Avatar>
+                        <Button onClick={() => signOut()} variant='outline' className={'rounded-md h-10 bg-[#84b179] text-white font-bold'}>Log Out</Button>
+                    </div>}
+                    {
+                        !user && <div className='flex flex-row gap-2'>
+                            <Link href={'/login'}>
+                            <Button variant='outline' className={'rounded-md h-10 border border-gray-300 font-bold'}>Log In</Button></Link>
+
+                            <Link href={'/register'}>
+                            <Button variant='outline' className={'rounded-md h-10 bg-linear-to-r from-[#84b179] via-[#a2c098c2] to-[#84b179] text-white font-bold'}>Registration</Button></Link>
+                        </div>
+                    }
                 </header>
             </nav>
 
