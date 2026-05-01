@@ -17,8 +17,8 @@ const Navbar = () => {
 
 
     if (isPending) {
-        return <div className='flex items-center justify-center min-h-screen'>
-            <HashLoader color="#456e3e" />
+        return <div className='flex items-center justify-center '>
+            <HashLoader color="#456e3e" size={24} />
         </div>
     }
 
@@ -55,10 +55,10 @@ const Navbar = () => {
                     {
                         !user && <div className='flex flex-row gap-2'>
                             <Link href={'/login'}>
-                            <Button variant='outline' className={'rounded-md h-10 border border-gray-300 font-bold'}>Log In</Button></Link>
+                                <Button variant='outline' className={'rounded-md h-10 border border-gray-300 font-bold'}>Log In</Button></Link>
 
                             <Link href={'/register'}>
-                            <Button variant='outline' className={'rounded-md h-10 bg-linear-to-r from-[#84b179] via-[#a2c098c2] to-[#84b179] text-white font-bold'}>Registration</Button></Link>
+                                <Button variant='outline' className={'rounded-md h-10 bg-linear-to-r from-[#84b179] via-[#a2c098c2] to-[#84b179] text-white font-bold'}>Registration</Button></Link>
                         </div>
                     }
                 </header>
