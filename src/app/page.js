@@ -45,6 +45,11 @@ export default async function Home() {
           <HighestCouresAni topCoures={topCoures}></HighestCouresAni>
         </div>
       </div>
+      <div>
+        {
+          
+        }
+      </div>
       <LearingTipsSection></LearingTipsSection>
       <TopInstructor></TopInstructor>
 

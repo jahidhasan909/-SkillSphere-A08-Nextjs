@@ -9,7 +9,13 @@
     "description": "Learn full-stack web development from Javascript.",
     "image": "https://i.ibb.co.com/mFHg0Fjp/2025-12-08-T14-25-01-527-Z-Course-Thumbnail-12.jpg",
     "category": "Development",
-    "technologies": ["HTML", "CSS", "JavaScript", "Node.js", "MongoDB"],
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "MongoDB"
+    ],
     "price": 120
   },
   {
@@ -22,7 +28,12 @@
     "description": "Learn systematic process of cleaning, transforming, and inspecting raw data to discover meaningful patterns.",
     "image": "https://i.ibb.co.com/bj6C9bKq/2024-12-23-T06-09-02-920-Z-2-2.jpg",
     "category": "Development",
-    "technologies": ["Excel", "Python", "Pandas", "Matplotlib"],
+    "technologies": [
+      "Excel",
+      "Python",
+      "Pandas",
+      "Matplotlib"
+    ],
     "price": 90
   },
   {
@@ -35,7 +46,13 @@
     "description": "Learn Next.js app router, SSR, and full-stack features.",
     "image": "https://i.ibb.co.com/yT333W3/Gemini-Generated-Image-807dog807dog807d.png",
     "category": "Development",
-    "technologies": ["Next.js", "React", "SSR", "API Routes", "Tailwind CSS"],
+    "technologies": [
+      "Next.js",
+      "React",
+      "SSR",
+      "API Routes",
+      "Tailwind CSS"
+    ],
     "price": 140
   },
   {
@@ -48,7 +65,12 @@
     "description": "Understand UI UX design principles and build better interfaces.",
     "image": "https://i.ibb.co.com/Qj6MVPhS/2024-12-19-T15-52-04-170-Z-Course-Thumbnail-13-1.jpg",
     "category": "Design",
-    "technologies": ["Figma", "Wireframing", "Prototyping", "Design Systems"],
+    "technologies": [
+      "Figma",
+      "Wireframing",
+      "Prototyping",
+      "Design Systems"
+    ],
     "price": 80
   },
   {
@@ -61,7 +83,12 @@
     "description": "Build modern React native applications mobile.",
     "image": "https://i.ibb.co.com/qMynDVW5/2025-06-26-T19-41-53-112-Z-react-native-thumb.jpg",
     "category": "Development",
-    "technologies": ["React", "TypeScript", "React Native paper", "Lucide React Native"],
+    "technologies": [
+      "React",
+      "TypeScript",
+      "React Native paper",
+      "Lucide React Native"
+    ],
     "price": 110
   },
   {
@@ -74,7 +101,12 @@
     "description": "Build cross-platform mobile apps using Flutter and Dart.",
     "image": "https://i.ibb.co.com/gMhg1DG1/2025-12-08-T14-27-28-969-Z-Flutter-Thumbnail.jpg",
     "category": "Mobile Development",
-    "technologies": ["Flutter", "Dart", "Firebase", "REST API"],
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "Firebase",
+      "REST API"
+    ],
     "price": 150
   },
   {
@@ -87,7 +119,12 @@
     "description": "Use artificial intelligence technologies to automate routine tasks.",
     "image": "https://i.ibb.co.com/Y4Lg7qFk/2025-12-08-T14-26-19-612-Z-ai-auto.jpg",
     "category": "Development",
-    "technologies": ["Python", "AI Agents", "Automation", "OpenAI API"],
+    "technologies": [
+      "Python",
+      "AI Agents",
+      "Automation",
+      "OpenAI API"
+    ],
     "price": 160
   },
   {
@@ -100,7 +137,12 @@
     "description": "Learn Python and start your journey in data science.",
     "image": "https://i.ibb.co.com/sJXtkTWx/2025-06-30-T13-13-06-980-Z-python-course-thumb.jpg",
     "category": "Data Science",
-    "technologies": ["Python", "NumPy", "Pandas", "Matplotlib"],
+    "technologies": [
+      "Python",
+      "NumPy",
+      "Pandas",
+      "Matplotlib"
+    ],
     "price": 100
   },
   {
@@ -113,7 +155,12 @@
     "description": "Learn SEO, social media marketing, and online branding.",
     "image": "https://i.ibb.co.com/BKYfkGvg/2025-02-10-T14-04-49-416-Z-Course-Thumbnail-21-v2.jpg",
     "category": "Marketing",
-    "technologies": ["SEO", "Facebook Ads", "Google Ads", "Content Marketing"],
+    "technologies": [
+      "SEO",
+      "Facebook Ads",
+      "Google Ads",
+      "Content Marketing"
+    ],
     "price": 70
   },
   {
@@ -126,7 +173,50 @@
     "description": "Understand machine learning concepts and build ML models.",
     "image": "https://i.ibb.co.com/MygDgMTQ/Machine-Learning.jpg",
     "category": "Artificial Intelligence",
-    "technologies": ["Python", "Scikit-learn", "TensorFlow", "ML Algorithms"],
+    "technologies": [
+      "Python",
+      "Scikit-learn",
+      "TensorFlow",
+      "ML Algorithms"
+    ],
     "price": 130
+  },
+  {
+    "id": 11,
+    "title": "Cyber Security Fundamentals",
+    "instructor": "Kevin Mitnick",
+    "duration": "12 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "description": "Learn the basics of cyber security, ethical hacking, and online protection.",
+    "image": "https://i.ibb.co.com/YYLGMLf/2025-07-24-T12-25-42-064-Z-5.jpg",
+    "category": "Security",
+    "technologies": [
+      "Networking",
+      "Ethical Hacking",
+      "Kali Linux",
+      "Security Basics"
+    ],
+    "price": 115,
+    "status": "new release"
+  },
+  {
+    "id": 12,
+    "title": "DevOps & CI/CD Pipeline",
+    "instructor": "Andrew Ng",
+    "duration": "17 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Master DevOps tools and build CI/CD pipelines using modern technologies.",
+    "image": "https://i.ibb.co.com/xTHrhLN/2025-01-23-T12-32-14-452-Z-Untitled-1-1-1.jpg",
+    "category": "Development",
+    "technologies": [
+      "Docker",
+      "Kubernetes",
+      "GitHub Actions",
+      "AWS"
+    ],
+    "price": 145,
+    "status": "new release"
   }
 ]

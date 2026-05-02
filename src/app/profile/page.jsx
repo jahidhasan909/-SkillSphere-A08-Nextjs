@@ -48,6 +48,7 @@ const ProfilePage = () => {
                     </Avatar>
                     <h1 className='text-2xl font-bold mt-3'>{user?.name}</h1>
                     <p className='text-[15px]'>{user?.email}</p>
+                    <p>STUDENT ID: {user?.name.length}SkillSphere999</p>
                 </div>
                 <div className='bg-white/40 py-6 gap-2 backdrop-blur-lg border border-white/70 flex rounded-md flex-col items-center'>
                     <h1 className='font-semibold text-xl'>Account Settings</h1>
