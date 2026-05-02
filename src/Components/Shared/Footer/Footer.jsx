@@ -24,7 +24,7 @@ const Footer = () => {
                                     Level-4, 34, Awal Centre, Banani, Dhaka</span>
                                 <span className='flex text-white items-center gap-2'><AiTwotoneMail />
                                     web@skillsphere.com</span>
-                                <div className='bg-white/60 backdrop-blur-lg border border-white-70 w-[330px] mt-7 flex items-center gap-2 p-3 rounded-md'>
+                                <div className='bg-white/80 backdrop-blur-lg border border-white-70 w-[330px] mt-7 flex items-center gap-2 p-3 rounded-md'>
                                     <IoCallSharp />
                                     <div>
                                         <p className='text-neutral-600'>Communication</p>

@@ -1,10 +1,16 @@
 "use client"
+import { authClient } from '@/lib/auth-client';
 import { Check } from '@gravity-ui/icons';
 import { Button, Form, Input, Label, TextField } from '@heroui/react';
+import { useRouter } from 'next/navigation';
+
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const UpdateProfile = () => {
+
+    const router = useRouter();
 
     const {
         register,
@@ -12,7 +18,24 @@ const UpdateProfile = () => {
         formState: { errors },
     } = useForm()
 
-    const onSubmit = () => {
+    const onSubmit = async (data) => {
+        const { name, image } = data;
+        const { data: res, error } = await authClient.updateUser({
+            image: image,
+            name: name,
+        },
+            {
+                onSuccess: () => {
+                    router.push('/profile')
+                }
+            }
+        )
+        if (error) {
+            toast.error("Error Update profile: " + error.message)
+        }
+        if (res) {
+            toast.success("Profile Update successful!");
+        }
 
     }
 
@@ -24,7 +47,7 @@ const UpdateProfile = () => {
                     <p className='text-neutral-500'>Please ensure your valid information!</p>
                 </div>
                 <Form onSubmit={handleSubmit(onSubmit)} className='bg-white/40 backdrop-blur-lg border border-gray-200 w-full shadow-md px-4 py-6 space-y-3  rounded-r-md'>
-                  <h1 className='font-bold text-xl mb-4 '>Your Information</h1>
+                    <h1 className='font-bold text-xl mb-4 '>Your Information</h1>
                     <TextField
                         isRequired
                         validate={(value) => {
@@ -47,7 +70,7 @@ const UpdateProfile = () => {
                         <Label>Photo URL</Label>
                         <Input   {...register('image')} className={' rounded-md border-gray-100 border'} placeholder="https://.." />
                     </TextField>
-                    <Button variant='outline' className={'rounded-md w-full bg-[#84b179d3] text-white font-semibold mt-3'}> <Check></Check> Save Changes</Button>
+                    <Button type='submit' variant='outline' className={'rounded-md w-full bg-[#84b179d3] text-white font-semibold mt-3'}> <Check></Check> Save Changes</Button>
                 </Form>
             </div>
 

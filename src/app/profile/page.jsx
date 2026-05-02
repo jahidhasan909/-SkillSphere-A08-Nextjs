@@ -9,10 +9,7 @@ import { HashLoader } from 'react-spinners';
 
 
 
-export const metadata = {
-    title: 'Profile',
-    description: '...',
-}
+
 
 
 
