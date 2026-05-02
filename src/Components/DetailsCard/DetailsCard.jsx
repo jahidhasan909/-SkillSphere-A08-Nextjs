@@ -1,8 +1,9 @@
 "use client"
 import { EnrollAdded, WishListAdded } from '@/Context/Courescontext';
 import { Avatar, Button, Card, Chip } from '@heroui/react';
+
 import Image from 'next/image';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import { HashLoader } from 'react-spinners';
 import { toast } from 'react-toastify';
@@ -11,16 +12,18 @@ const DetailsCard = ({ expectedCouresDetails }) => {
 
     const { enroll, setEnroll } = useContext(EnrollAdded)
     const { Wishlist, setWistlish } = useContext(WishListAdded)
-
+    const [isdisable, setIsDisable] = useState(false)
 
 
     const handleEnroll = () => {
         toast.success(`${expectedCouresDetails.title} successfully Enroll`)
         setEnroll([...enroll, { ...expectedCouresDetails, id: Date.now() }])
+        setIsDisable(true)
     }
     const handleWishlist = () => {
         toast.success(`${expectedCouresDetails.title} successfully Wishlist`)
         setWistlish([...Wishlist, { ...expectedCouresDetails, id: Date.now() }])
+        setIsDisable(true)
     }
 
     if (!expectedCouresDetails) {
@@ -63,8 +66,8 @@ const DetailsCard = ({ expectedCouresDetails }) => {
                         <span className='text-xl font-semibold'>${expectedCouresDetails?.price}</span>
                         <p className='text-[13px] text-neutral-500'>One-time payment, lifetime access</p>
                         <div className='flex flex-col gap-2'>
-                            <Button onClick={handleEnroll} className={'rounded-md bg-[#84b179] w-full text-white font-semibold'} variant='outline'>Enroll Now</Button>
-                            <Button onClick={handleWishlist} className={'rounded-md w-full bg-[#f5fbf0]'} variant='outline'>Add to Wishlist</Button>
+                            <Button isDisabled={isdisable} onClick={handleEnroll} className={'rounded-md bg-[#84b179] w-full text-white font-semibold'} variant='outline'>Enroll Now</Button>
+                            <Button isDisabled={isdisable} onClick={handleWishlist} className={'rounded-md w-full bg-[#f5fbf0]'} variant='outline'>Add to Wishlist</Button>
                         </div>
 
                         <div>
