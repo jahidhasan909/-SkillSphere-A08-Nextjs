@@ -51,7 +51,7 @@ const Banner = () => {
             </motion.div>
 
 
-            <motion.div className=' bottom-1/8 right-7 md:right-8 lg:right-1/10 absolute' {...foaltAnimation}>
+            <motion.div className=' bottom-1/8 right-4 md:right-8 lg:right-1/10 absolute' {...foaltAnimation}>
 
                 <Image className='w-10 lg:w-full md:w-20' src={'https://i.ibb.co.com/tRZ3D5f/Chat-GPT-Image-May-1-2026-at-02-27-09-AM-Picsart-Ai-Image-Enhancer-removebg-preview.png'} width={90} height={90} alt=''></Image>
             </motion.div>

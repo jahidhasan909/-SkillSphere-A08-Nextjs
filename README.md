@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Project Name:                                                                           
 
-## Getting Started
+SkillSphere – Online Learning Platform                                                                           
 
-First, run the development server:
+Purpose:                                                                           
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+SkillSphere is a modern online learning platform designed to help students explore courses, manage their learning journey, and track progress easily. It provides a smooth and interactive user experience with authentication, course management, and personalized profiles.                                                                           
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Live URL: https://skill-sphere-a08-nextjs.vercel.app
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+                                                                           
+Key Features:                                                                           
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* Authentication System:                                                                           
 
-## Learn More
+Email & password login
+Google social login
+Secure authentication with protected routes                                                                           
 
-To learn more about Next.js, take a look at the following resources:
+* User Profile Management:                                                                                                                                                       
+View user/student information
+Update profile with real-time data changes
+Redirect flow after update for smooth                                                                             
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Course Features:                                                                            
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Enroll in courses
+Add/remove wishlist courses
+Dynamic course details page (private route)                                                                           
 
-## Deploy on Vercel
+* Search Functionality:                                                                           
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Search courses by title instantly                                                                           
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Personal Dashboard:                                                                           
+
+My Profile page with enrolled & wishlist courses                                                                           
+
+* State Management:                                                                           
+
+Context API used for managing enroll & wishlist data
+Local storage integration for persistence
+* Animations:                                                                           
+
+Hero banner with swiper slider
+Motion animation (cards & sections)
+Student reviews with marquee animation                                                                           
+
+* Homepage Sections:                                                                           
+
+Top Trending Courses
+New Release Courses
+Featured course cards                                                                           
+
+* Route Protection:                                                                           
+
+Private routes for profile & course details                                                                           
+Redirect to login if not authenticated                                                                           
+* Responsive Design :                                                                           
+Fully responsive for mobile, tablet, and desktop                                                                           
+Technologies:                                                                           
+ * Next.js                                                                           
+ * Tailwind CSS                                                                           
+ * HeroUI                                                                           
+ * Better Auth                                                                           
+ * MongoDB                                                                           
+ * React Hook Form                                                                           
+ * React Toastify                                                                           
+ * React Icons                                                                           
+ * Framer Motion                                                                           
+ * Swiper.js                                                                           
+ * React Fast Marquee                                                                           
+ * React Spinner                                                                           
