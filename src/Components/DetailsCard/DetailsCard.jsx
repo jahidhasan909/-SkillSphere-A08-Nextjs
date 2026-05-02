@@ -16,11 +16,11 @@ const DetailsCard = ({ expectedCouresDetails }) => {
 
     const handleEnroll = () => {
         toast.success(`${expectedCouresDetails.title} successfully Enroll`)
-        setEnroll([...enroll, expectedCouresDetails])
+        setEnroll([...enroll, { ...expectedCouresDetails, id: Date.now() }])
     }
     const handleWishlist = () => {
         toast.success(`${expectedCouresDetails.title} successfully Wishlist`)
-        setWistlish([...Wishlist, expectedCouresDetails])
+        setWistlish([...Wishlist, { ...expectedCouresDetails, id: Date.now() }])
     }
 
     if (!expectedCouresDetails) {
