@@ -1,10 +1,28 @@
 "use client"
 import { useSession } from '@/lib/auth-client';
 import { Avatar, Button } from '@heroui/react';
+import Link from 'next/link';
 import React from 'react';
 import { HashLoader } from 'react-spinners';
 
+
+
+
+
+export const metadata = {
+    title: 'Profile',
+    description: '...',
+}
+
+
+
 const ProfilePage = () => {
+
+
+
+
+
+
 
     const { data, isPending } = useSession();
     const user = data?.user
@@ -30,7 +48,9 @@ const ProfilePage = () => {
                 </div>
                 <div className='bg-white/40 py-6 gap-2 backdrop-blur-lg border border-white/70 flex rounded-md flex-col items-center'>
                     <h1 className='font-semibold text-xl'>Account Settings</h1>
-                    <Button className={'rounded-md bg-linear-to-r from-[#84b179] via-[#a2c098c2] to-[#84b179] text-white font-semibold'} variant='outline'>Update Profile</Button>
+                    <Link href={'/updatedprofile'}>
+                        <Button className={'rounded-md bg-linear-to-r from-[#84b179] via-[#a2c098c2] to-[#84b179] text-white font-semibold'} variant='outline'>Update Profile</Button>
+                    </Link>
                 </div>
             </div>
         </div>

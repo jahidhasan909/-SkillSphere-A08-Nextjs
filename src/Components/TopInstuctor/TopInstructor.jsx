@@ -4,6 +4,8 @@ import Image from 'next/image';
 import React from 'react';
 import { motion } from 'framer-motion'
 
+
+
 const TopInstructor = () => {
     return (
         <div className=' container mx-auto my-20'>
@@ -15,7 +17,6 @@ const TopInstructor = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.15 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5, scale: 1.03 }}
             >
                 <div className='grid grid-cols-4 gap-3'>
                     <Card className="border  bg-[#d9ebd496] shadow rounded-md" variant="">

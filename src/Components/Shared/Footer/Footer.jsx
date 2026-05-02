@@ -24,12 +24,12 @@ const Footer = () => {
                                     Level-4, 34, Awal Centre, Banani, Dhaka</span>
                                 <span className='flex text-white items-center gap-2'><AiTwotoneMail />
                                     web@skillsphere.com</span>
-                                <div className='bg-white w-[330px] mt-7 flex items-center gap-2 p-3 rounded-md'>
+                                <div className='bg-white/60 backdrop-blur-lg border border-white-70 w-[330px] mt-7 flex items-center gap-2 p-3 rounded-md'>
                                     <IoCallSharp />
                                     <div>
-                                        <p className='text-neutral-500'>Communication</p>
+                                        <p className='text-neutral-600'>Communication</p>
                                         <h3 className='font-semibold text-[1.10rem]'>01400-90005 , 01800-000870</h3>
-                                        <p className='text-neutral-500'>(Sat - Thu, 10:00 AM to 7:00 PM)</p>
+                                        <p className='text-neutral-600'>(Sat - Thu, 10:00 AM to 7:00 PM)</p>
                                     </div>
                                 </div>
                             </div>
