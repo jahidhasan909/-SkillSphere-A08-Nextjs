@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 const TopInstructor = () => {
     return (
         <div className=' container mx-auto my-20'>
-            <h1 className='text-2xl font-bold py-7'>Top Instructors</h1>
+            <h1 className='text-2xl font-bold py-7'>Top <span className='text-[#4d7946]'>Instructors</span></h1>
 
 
             <motion.div
