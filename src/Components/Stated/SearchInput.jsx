@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { IoSearchOutline } from 'react-icons/io5';
 import AllCouresCard from '../AllCoures/AllCouresCard';
 import { motion } from 'framer-motion';
+import { SearchField } from '@heroui/react';
 
 
 const SearchInput = ({ allCoures }) => {
@@ -14,9 +15,21 @@ const SearchInput = ({ allCoures }) => {
 
     return (
         <div>
-            <div className='relative'>
-                <span className='top-[37px] left-4  text-neutral-400   z-50 absolute'><IoSearchOutline /></span>
-                <input onChange={(e) => setSearch(e.target.value)} value={search} className='bg-white  relative w-[300px] py-3 pl-9 px-3 rounded-md border-[#84b179] border mt-5' type="search" placeholder="Search" />
+            <div className='bg-linear-to-r from-[#c7eabb9e] to-[#a2cb8b82] rounded-md flex justify-center items-center px-3 py-3 mt-7 mb-1 w-[700px] mx-auto'>
+
+
+                <SearchField >
+                    <SearchField.Group className={'rounded-md h-[50px] bg-white/50 backdrop-blur-lg border border-white/70'}>
+                        <SearchField.SearchIcon />
+                        <SearchField.Input 
+                        onChange={(e) => setSearch(e.target.value)} 
+                        value={search} 
+                        className="w-[450px]  rounded-md"
+                         placeholder="Search..." />
+                        <SearchField.ClearButton />
+                    </SearchField.Group>
+                </SearchField>
+
             </div>
 
 
