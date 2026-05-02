@@ -1,7 +1,7 @@
 "use client"
 import { Avatar, Button } from '@heroui/react';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navlink from './Navlink';
 import Link from 'next/link';
 import { signOut, useSession } from '@/lib/auth-client';
@@ -11,9 +11,13 @@ import { HashLoader } from 'react-spinners';
 const Navbar = () => {
 
 
-    const { data, isPending } = useSession()
+    const { data, isPending, refetch } = useSession()
 
     const user = data?.user
+
+    useEffect(() => {
+        refetch()
+    }, [refetch])
 
 
     if (isPending) {
@@ -46,10 +50,11 @@ const Navbar = () => {
 
 
                     {user && <div className='flex items-center gap-2'>
-                        <Avatar>
-                            <Avatar.Image alt="user img" src={user?.image} />
-                            <Avatar.Fallback>JD</Avatar.Fallback>
-                        </Avatar>
+                        <Link href={'/profile'}>
+                            <Avatar>
+                                <Avatar.Image alt="user img" src={user?.image} />
+                                <Avatar.Fallback>JD</Avatar.Fallback>
+                            </Avatar></Link>
                         <Button onClick={() => signOut()} variant='outline' className={'rounded-md h-10 bg-[#84b179] text-white font-bold'}>Log Out</Button>
                     </div>}
                     {

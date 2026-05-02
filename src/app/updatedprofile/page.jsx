@@ -26,6 +26,7 @@ const UpdateProfile = () => {
         },
             {
                 onSuccess: () => {
+                    router.refresh()
                     router.push('/profile')
                 }
             }

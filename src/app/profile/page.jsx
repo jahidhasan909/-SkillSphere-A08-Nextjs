@@ -2,7 +2,7 @@
 import { useSession } from '@/lib/auth-client';
 import { Avatar, Button } from '@heroui/react';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { HashLoader } from 'react-spinners';
 
 
@@ -21,8 +21,14 @@ const ProfilePage = () => {
 
 
 
-    const { data, isPending } = useSession();
+    const { data, isPending, refetch } = useSession();
     const user = data?.user
+
+
+    useEffect(() => {
+        refetch();
+    }, [refetch])
+
 
     if (isPending) {
         return <div className='flex items-center justify-center min-h-screen'>
