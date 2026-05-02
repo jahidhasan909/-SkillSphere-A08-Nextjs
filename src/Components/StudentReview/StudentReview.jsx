@@ -7,7 +7,7 @@ import Marquee from "react-fast-marquee";
 
 const StudentReview = () => {
     return (
-        <div className='container mx-auto py-18  my-20 '>
+        <div className='w-full container mx-auto py-18  my-20'>
             <h2 className='text-center text-3xl font-bold pb-8'>Successful students <span className='text-[#4d7946]'>review</span></h2>
             <Marquee pauseOnHover={true} speed={100}>
 

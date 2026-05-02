@@ -12,17 +12,17 @@ const AllCouresCard = ({ allCouress }) => {
             <HashLoader color="#456e3e" />
         </div>
     }
-    return (
+    return (    
         <div>
 
-            
+
             <Card className="rounded-md bg-white/40 border border-white/87 backdrop-blur-3xl shadow-lg" variant="">
                 <Card.Header className='space-y-1'>
                     <div className='relative w-full h-[180px] overflow-hidden rounded-md'>
                         <Image src={allCouress?.image} width={400} height={180} className='object-contain' alt='coures img'></Image>
                     </div>
                     <Card.Description>{allCouress?.category}</Card.Description>
-                    <Card.Title className='font-bold text-[17px]'>{allCouress?.title}</Card.Title>
+                    <Card.Title className='font-bold text-[17px] truncate'>{allCouress?.title}</Card.Title>
                     <Card.Content>
                         <Card.Description>Instructor : {allCouress?.instructor}</Card.Description>
                         <div className='border-b my-2 text-[#84b179]'></div>

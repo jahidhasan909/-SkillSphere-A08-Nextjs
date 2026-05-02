@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 
 const TopInstructor = () => {
     return (
-        <div className=' container mx-auto my-20'>
+        <div className='w-full container mx-auto my-20'>
             <h1 className='text-2xl font-bold py-7'>Top <span className='text-[#4d7946]'>Instructors</span></h1>
 
 
@@ -18,7 +18,7 @@ const TopInstructor = () => {
                 transition={{ duration: 0.5, delay: 0.15 }}
                 viewport={{ once: true }}
             >
-                <div className='grid grid-cols-4 gap-3'>
+                <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-3'>
                     <Card className="border  bg-[#d9ebd496] shadow rounded-md" variant="">
                         <Card.Header className='mx-auto space-y-2 text-center flex flex-col justify-center items-center'>
                             <Image src={'https://i.ibb.co.com/gMCLGSzV/1691458003200.jpg'} className=' rounded-full' width={80} height={80} alt=''></Image>

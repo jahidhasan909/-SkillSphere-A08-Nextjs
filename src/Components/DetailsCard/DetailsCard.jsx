@@ -1,18 +1,26 @@
 "use client"
+import { EnrollAdded, WishListAdded } from '@/Context/Courescontext';
 import { Avatar, Button, Card, Chip } from '@heroui/react';
 import Image from 'next/image';
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaStar } from 'react-icons/fa';
 import { HashLoader } from 'react-spinners';
 import { toast } from 'react-toastify';
 
 const DetailsCard = ({ expectedCouresDetails }) => {
 
+    const { enroll, setEnroll } = useContext(EnrollAdded)
+    const { Wishlist, setWistlish } = useContext(WishListAdded)
+
+
+
     const handleEnroll = () => {
         toast.success(`${expectedCouresDetails.title} successfully Enroll`)
+        setEnroll([...enroll, expectedCouresDetails])
     }
     const handleWishlist = () => {
         toast.success(`${expectedCouresDetails.title} successfully Wishlist`)
+        setWistlish([...Wishlist, expectedCouresDetails])
     }
 
     if (!expectedCouresDetails) {
@@ -26,7 +34,7 @@ const DetailsCard = ({ expectedCouresDetails }) => {
     return (
         <div className=' container mx-auto my-10'>
             <Card className="rounded-md bg-[#f5fbf0]  shadow border" variant="tertiary">
-                <Card.Header className='grid grid-cols-12'>
+                <Card.Header className='flex gap-2 lg:grid lg:grid-cols-12'>
                     <div className='col-span-9  border-r-2 border-r-[#b2d5ab65] space-y-3 mt-3 pl-4'>
                         <div className='flex gap-2'>
                             <Chip color="" className='bg-[#e8f5d0] rounded-md font-semibold text-[0.90rem]'>{expectedCouresDetails.level}</Chip>

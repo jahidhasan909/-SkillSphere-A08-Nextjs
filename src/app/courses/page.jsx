@@ -19,7 +19,7 @@ const CoursesPage = async () => {
     const allCoures = await getAllCoures();
     return (
         <div className='bg-linear-to-r from-[#c7eabb3f] to-[#a2cb8b48]'>
-            <div className=' container mx-auto py-15'>
+            <div className='w-full container mx-auto py-15'>
                 <h1 className='text-3xl font-bold text-center'>All <span className='text-[#4d7946]'>Courses</span></h1>
 
 

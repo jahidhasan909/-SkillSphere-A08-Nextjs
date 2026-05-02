@@ -29,15 +29,15 @@ export default async function Home() {
   const topCoures = couresData.sort((a, b) => b.rating - a.rating).slice(0, 4)
   const newRelease = couresData.filter(newCoures => newCoures.status == 'new release')
 
-  
-  
+
+
 
 
   return (
     <div>
       <Banner></Banner>
       <div className=" bg-linear-to-r from-[#c7eabb3f] to-[#a2cb8b27] py-24 mb-20">
-        <div className="container mx-auto">
+        <div className="w-full container mx-auto">
           <div className="flex justify-between items-center">
             <div >
               <h2 className="text-2xl font-bold">Popular <span className="text-[#4d7946]">Courses</span></h2>
@@ -51,7 +51,7 @@ export default async function Home() {
         </div>
       </div>
       <div>
-       <NewReleseAni newRelease={newRelease}></NewReleseAni>
+        <NewReleseAni newRelease={newRelease}></NewReleseAni>
       </div>
       <LearingTipsSection></LearingTipsSection>
       <TopInstructor></TopInstructor>

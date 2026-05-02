@@ -27,7 +27,7 @@ const HighestRatedCours = ({ topCouress }) => {
                             <Image src={topCouress?.image} height={180} width={400} className='object-contain ' alt='coures img'></Image>
                         </div>
                         <Card.Description>{topCouress?.category}</Card.Description>
-                        <Card.Title className='font-bold text-[17px]'>{topCouress?.title}</Card.Title>
+                        <Card.Title className='font-bold text-[17px] truncate'>{topCouress?.title}</Card.Title>
                         <Card.Content>
                             <Card.Description>Instructor : {topCouress?.instructor}</Card.Description>
                             <div className='border-b my-2 text-[#84b179]'></div>

@@ -50,9 +50,9 @@ const LogInPage = () => {
 
     return (
         <div className='container mx-auto flex justify-center my-20'>
-            <div className='grid grid-cols-2 border border-gray-200 rounded-md'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 border border-gray-200 rounded-md'>
 
-                <div className='bg-[#84b17990] shadow-md flex flex-col justify-center space-y-3 rounded-l-md'>
+                <div className='bg-[#84b17990] py-5 shadow-md flex flex-col justify-center space-y-3 rounded-l-md'>
                     <h1 className='text-center font-bold text-3xl'>Welcome <span className='text-[#65935a]'>Back!</span></h1>
                     <p className='text-center text-neutral-500 text-[14px]'>Continue your learning journey and achieve your goals today.</p>
                     <ul className=' list-disc text-neutral-500 px-40 text-[14px]'>

@@ -15,7 +15,7 @@ const SearchInput = ({ allCoures }) => {
 
     return (
         <div>
-            <div className='bg-linear-to-r from-[#c7eabb9e] to-[#a2cb8b82] rounded-md flex justify-center items-center px-3 py-3 mt-7 mb-1 w-[700px] mx-auto'>
+            <div className='bg-linear-to-r from-[#c7eabb9e] to-[#a2cb8b82] rounded-md flex justify-center items-center px-3 py-3 mt-7 mb-1 w-[380px] md:w-[700px] lg:w-[700px] mx-auto'>
 
 
                 <SearchField >
@@ -24,7 +24,7 @@ const SearchInput = ({ allCoures }) => {
                         <SearchField.Input 
                         onChange={(e) => setSearch(e.target.value)} 
                         value={search} 
-                        className="w-[450px]  rounded-md"
+                        className="w-[250px]  md:w-[450px] lg:w-[450px]  rounded-md"
                          placeholder="Search..." />
                         <SearchField.ClearButton />
                     </SearchField.Group>
@@ -34,7 +34,7 @@ const SearchInput = ({ allCoures }) => {
 
 
 
-            <div className='grid grid-cols-4 gap-3 py-5'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 py-5'>
 
                 {
                     fillterArray.map((allCouress, index) => <motion.div

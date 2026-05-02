@@ -41,9 +41,9 @@ const UpdateProfile = () => {
     }
 
     return (
-        <div className=' container  mx-auto flex items-col  justify-center  my-20 rounded-md'>
-            <div className='grid grid-cols-2 w-[800px] shadow-md rounded-md'>
-                <div className='bg-[#84b1798a] text-center flex flex-col  justify-center rounded-l-md'>
+        <div className=' container  mx-auto flex   justify-center  my-20 rounded-md'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 w-[800px] shadow-md rounded-md'>
+                <div className='bg-[#84b1798a] py-5 text-center flex flex-col  justify-center rounded-l-md'>
                     <h1 className='font-bold text-2xl '>Update <span className='text-[#84b179]'>Information</span></h1>
                     <p className='text-neutral-500'>Please ensure your valid information!</p>
                 </div>
